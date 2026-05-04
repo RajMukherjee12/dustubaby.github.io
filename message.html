@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Letter to My Bestie 💌</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #ff8acc;
+      --bg-card: rgba(20,20,35,0.92);
+      --text-light: #f0f0ff;
+      --blur: blur(10px);
+    }
+
+    body {
+      background: url("images/bg.jpeg") center / cover no-repeat fixed;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+      color: var(--text-light);
+    }
+
+    /* 🔥 CARD FIXED */
+    .message-card {
+      background: var(--bg-card);
+      backdrop-filter: var(--blur);
+      border-radius: 40px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+
+      width: 50vw;
+      max-width: 900px;
+
+      padding: 0;              
+      overflow: hidden;         
+    }
+
+    .title {
+      font-family: 'Pacifico', cursive;
+      color: var(--accent);
+      font-size: clamp(2rem, 6vw, 2.8rem);
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    /* 🔥 ENVELOPE FULL COVER */
+    .envelope-wrapper {
+      position: relative;
+      width: 100%;
+      height: 65vh;
+
+      margin: 0;
+      max-width: none;
+
+      border-radius: inherit;
+      overflow: hidden;
+
+      cursor: pointer;
+    }
+
+    /* COVER */
+    .cover {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, #2a1a3a, #4a2a5a);
+      z-index: 10;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      font-family: 'Pacifico', cursive;
+      font-size: clamp(2.5rem, 8vw, 3.5rem);
+      color: var(--accent);
+
+      transition: opacity 1s ease;
+      border-radius: inherit;
+    }
+
+    .cover-img {
+      max-width: 80%;
+      max-height: 60%;
+      margin-bottom: 1rem;
+      border-radius: 20px;
+    }
+
+    .opened .cover {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* MESSAGE FULL COVER */
+    .message-content {
+      position: absolute;
+      inset: 0;
+      padding: 2.5rem 2rem;
+
+      overflow-y: auto;
+
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+
+      border-radius: inherit;
+    }
+
+    .opened .message-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+   .message-text {
+  font-size: clamp(2rem, 4vw, 2.2rem);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+    .emojis {
+      text-align: center;
+      font-size: 3rem;
+      margin: 1.5rem 0;
+    }
+
+    .closing {
+      text-align: center;
+      color: var(--accent);
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    /* Scrollbar */
+    .message-content::-webkit-scrollbar {
+      width: 6px;
+    }
+    .message-content::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 10px;
+    }
+
+    /* MOBILE */
+    @media(max-width: 768px) {
+      .message-card {
+        width: 95vw;
+      }
+
+      .envelope-wrapper {
+        height: 70vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<!-- Background Music -->
+<audio id="bgMusic" loop preload="auto">
+    <source src="song.mp4" type="audio/mpeg">
+    <!-- Add more formats if needed -->
+    <source src="song.mp4" type="audio/mpeg">
+</audio>
+<div class="message-card">
+
+  <h2 class="title">To My Long-Distance Soulmate ♥</h2>
+
+  <div id="envelope" class="envelope-wrapper" onclick="this.classList.toggle('opened')">
+
+    <div class="cover">
+      <img src="images/cover.webp" class="cover-img">
+      <span>♡ Tap to Open ♡</span>
+    </div>
+
+    <div class="message-content">
+      <p class="message-text">
+       Hey my most favorite person in the whole world... 💗🌍<br><br>
+
+Tui aaj o amar protidin er shobcheye bright part ✨ — eto distance thakar shotteo 🌙. Amra ekshathe hasi 😂, pagol pagol reels share kori 📱, aar somehow ei distance ta kichui mone hoy na 🤍.  
+
+Shotti bolte, sudhu 5 bar dekha hoyeche amader real life e… 🫶 kintu oi 5 ta dekha tei amra shob romantic jinis kore felechi 💫 — kono naam chara, kono label chara… sudhu best friend hoye 🐰. Tokhon bujhini, kintu aaj bujhi — seigulo sudhu bondhutto chhilo na, seigulo chhilo amader golper shuru 📖💗.  
+
+Mone ache? Oi chhoto chhoto muhurto gulo… tui amar haat dhorli 🤝 tokhn amar feeling ta ami express korte parini 🫠 ami koto ta khushi hoyechilam 💓 tarpor ice cream khawano 🍦 ami toh lojja payegechilam 🙈 tai sudhu takiye haschhilam 😊, metro te jor kore cream lagano 🫶, chotto chotto message like "Ki korchis","oi snna" 💬 ei sob kichu niye amr life ta tui puro complete kore diyechis 💖. Ei sob simple moment gulo amar jonne eto special chhilo je aaj-o chokh bondho korle dekhte pai 🌙✨. Oi 5 ta dekha-te amra joto moments feel korechi… shegulo kothay bojhano jaye na 🫶💫.  
+
+Onek voice note 🎧, endless memes 😂 aar sei messages 💬 — ei sob diye tui amar din ta puro complete kore dis 💕. Tui amar favorite contact 📱, amar meme dealer 😜, amar comfort person 🤍… amar shob kichu 🌍💗.  
+
+Ekta kotha janis? 🤭 Tui agey raat 11 tar modhye net off kore ghumiye portis 😴… aar akhon? Amar sathe kotha bolte bolte raat kete jay 🌙. Sei late night call gulo… 📞 5 ta porjonto kotha bola 🌅, majhe majhe chup thaka 🤫, raag kora 😤, obhiman kora 🥺, abar hashte thaka 😂 — oi shob muhurto amar jonne shobcheye precious 💖✨.  
+
+Aar 18th March… 📅 raat 2:45AM e… ⏰ amar jibon er shobcheye boro decision niyechhilam — toke bolechhilam je ami toke bhalobashi 💗. Oi muhurto ta amar jonne shudhu ekta proposal chhilo na… sheta chhilo amar moner shob kotha tor kachhe tule dhorar shomoy 💫🤍.  
+
+Amar mone hoy tui sudhu best friend na… tui amar soulmate 💞🌙.  
+
+Tor 24th birthday te 🎂 ami sudhu etai bolte chai — thank you 🤍, amar jibon e eshe amar shob kichu eto shundor kore deyar jonno 🌸. Ami chai ei bochhor tor jibone endless soft moments 🌷 ase, bhalo health 💖, pagol pagol adventure 🚀, aar onek onek meet-up 🫶… jekhane ami toke abar amar kachhe pete pari 💗.  
+
+I love you more than yesterday 💖 and way less than tomorrow ♾️♡  
+      </p>
+
+      <div class="emojis">💗🐰🌙💌✨</div>
+
+      <div class="closing">
+        Forever your 24/7 bestie — no matter the timezone<br>
+        love you endlessly × infinity
+      </div>
+    </div>
+
+  </div>
+</div>
+<script>
+// Music Persistence Across Pages
+const bgMusic = document.getElementById('bgMusic');
+
+function initMusic() {
+    const savedTime = localStorage.getItem('musicTime');
+    const isPlaying = localStorage.getItem('musicPlaying') === 'true';
+
+    if (savedTime) {
+        bgMusic.currentTime = parseFloat(savedTime);
+    }
+
+    // Try to autoplay
+    if (isPlaying) {
+        bgMusic.play().catch(() => {});
+    }
+
+    // Save progress every second
+    setInterval(() => {
+        if (!bgMusic.paused) {
+            localStorage.setItem('musicTime', bgMusic.currentTime);
+            localStorage.setItem('musicPlaying', 'true');
+        }
+    }, 1000);
+
+    // Save when user leaves the page
+    window.addEventListener('beforeunload', () => {
+        localStorage.setItem('musicTime', bgMusic.currentTime);
+        localStorage.setItem('musicPlaying', !bgMusic.paused);
+    });
+}
+
+// Toggle Music Button (Optional but recommended)
+function createMusicButton() {
+    const btn = document.createElement('button');
+    btn.innerHTML = '🎵';
+    btn.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(255,140,180,0.9);
+        border: none;
+        font-size: 24px;
+        color: white;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        cursor: pointer;
+    `;
+    
+    btn.onclick = () => {
+        if (bgMusic.paused) {
+            bgMusic.play();
+            localStorage.setItem('musicPlaying', 'true');
+        } else {
+            bgMusic.pause();
+            localStorage.setItem('musicPlaying', 'false');
+        }
+    };
+    
+    document.body.appendChild(btn);
+}
+
+// Initialize
+window.addEventListener('load', () => {
+    initMusic();
+    createMusicButton();
+});
+</script>
+<script>
+  document.getElementById('envelope').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      this.classList.toggle('opened');
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
